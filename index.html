@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Chamada: Lista de Nomes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="cartao">
+    <header class="cabecalho">
+      <h1>Painel de Alunos</h1>
+      <p class="subtitulo">Renderização dinâmica de dados com JavaScript</p>
+    </header>
+
+    <section class="painel-controle">
+  <input type="text" id="campoNovoNome" placeholder="Digite um nome">
+  <button id="btnAdicionar" onclick="adicionarNovoNome()">Adicionar Nome</button>
+  <button id="btnCarregar" onclick="exibirListaAutomaticamente()">Carregar Lista de Nomes</button>
+  <button id="btnInvertido" onclick="exibirOrdemInvertida()">Exibir Invertido</button>
+  <button id="btnLimpar" onclick="limparLista()">Limpar Tela</button>
+    </section>
+
+    <div class="status-barra">
+      <span id="contadorNomes">Nenhum nome carregado no momento.</span>
+    </div>
+
+    <ul id="listaEstudantes" class="lista-nomes">
+      <!-- Os itens da lista serão gerados dinamicamente pelo JavaScript -->
+    </ul>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

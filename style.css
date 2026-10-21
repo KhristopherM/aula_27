@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f5f9;
+  padding: 20px;
+}
+
+.cartao {
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cabecalho h1 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.painel-controle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#campoNovoNome {
+  flex: 1 1 100%;    /* ocupa a linha inteira; botões vão para baixo */
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+button {
+  flex: 1;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#btnCarregar {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+#btnCarregar:hover {
+  background-color: #1d4ed8;
+}
+
+#btnLimpar {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+#btnLimpar:hover {
+  background-color: #cbd5e1;
+}
+
+.status-barra {
+  padding: 10px 14px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #475569;
+  text-align: center;
+  font-weight: bold;
+}
+
+.lista-nomes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.item-nome {
+  background-color: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 4px solid #2563eb;
+  color: #1e293b;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: surgimentoSuave 0.25s ease-in-out;
+}
+
+.posicao-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+@keyframes surgimentoSuave {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
